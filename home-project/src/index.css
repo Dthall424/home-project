@@ -1,0 +1,85 @@
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  background-color: darkslategrey;
+  color: white;
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/***creating a wrapper for the page excluding the main-nav****/
+
+.wrapper {
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 80%;
+  padding: 0 20px;
+}
+
+/*Styles that are specific to the CLcontact.html page only*/
+
+div input {
+    margin-bottom: 20px;
+}
+
+#sWrapper {
+  text-align: center;
+}
+
+/* Creating a Flexbox for the main-nav, making it stick to the top of the pages,
+and styling it. */
+
+.main-nav {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin-top: 0;
+  background-color: black;
+  overflow: auto;
+  height: 25px;
+  margin-left: -10px;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+.main-nav li a {
+  text-decoration: none;
+  color: deepskyblue;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+a:hover {
+  color: white;
+}
+
+.mainhead {
+  margin-top: 0;
+  text-align: center;
+  color: deepskyblue;
+}
+
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+
+
+.wrapper {
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 80%;
+  padding: 0 20px;
+}
