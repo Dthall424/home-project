@@ -1,14 +1,13 @@
 body {
-  font-family: sans-serif;
-  line-height: 1.5;
-  background-color: darkslategrey;
-  color: white;
-  width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  background-color: darkslategrey;
+  color: white;
+  width: 100%;
 }
 
 /***creating a wrapper for the page excluding the main-nav****/
@@ -38,16 +37,18 @@ and styling it. */
   display: flex;
   list-style: none;
   justify-content: center;
-  margin-top: -10px;
+  margin-top: -9px;
+  margin-left: -16px;
   background-color: black;
   overflow: auto;
   height: 25px;
-  margin-left: -10px;
+  width: 100%;
 }
 
 .sticky {
   position: sticky;
   top: 0;
+  text-align: center;
 }
 
 .main-nav li a {
@@ -69,17 +70,27 @@ a:hover {
 
 
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
+/*====MEDIA QUERIES=======*/
+/*Anything written here will run if the browser size is above 769px*/
+/*
+@media (min-width: 769px) {
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
+  .main-nav {
+    justify-content: center;
+  }
 
+  .main-nav li a {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 
-.wrapper {
-  box-sizing: border-box;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 80%;
-  padding: 0 20px;
-}
+  .item {
+    width: 48%;
+    margin-right: auto;
+    padding-right: 1%;
+  }*/
