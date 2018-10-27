@@ -1,7 +1,21 @@
 import React, { Component } from 'react';
 import './CLPro.css';
+import Contact from './Contact' 
 
 class App extends Component {
+  constructor() {
+    super()
+      this.state = {
+        repos: []
+      }
+  }
+
+async componentDidMount() {
+  const res = await fetch('https://api.github.com/users/Dthall424/repos')
+  const json = await res.json()
+  this.setState({repos: json})
+  console.log(json)
+}
   render() {
     return (
 
@@ -31,6 +45,7 @@ class App extends Component {
         <p className="item">
           ipsum dolor sit amet, consectetur adipiscing elit. Sed nec finibus neque, et aliquet turpis. Maecenas finibus aliquam tortor, in pulvinar mauris lacinia quis. Proin iaculis, est id facilisis pretium, tellus enim imperdiet eros, ut mattis ex libero quis sapien. Praesent posuere erat at ex bibendum, in accumsan dolor sollicitudin. Ut condimentum est quis vestibulum accumsan. Integer tempus lacinia risus. Mauris ac sollicitudin nunc, non blandit mauris. Donec tempor faucibus bibendum. Nunc elementum odio sed ipsum vehicula pharetra. Praesent diam quam, consectetur et dui et, mattis vestibulum ante. Vivamus tempus a magna ac tincidunt. Sed at cursus diam. Morbi suscipit ante non massa hendrerit vehicula. Sed viverra tellus non pharetra varius. Morbi eget ante consectetur augue rhoncus blandit.
         </p>
+        <Contact />
       </div>
     </div>
   </body>
