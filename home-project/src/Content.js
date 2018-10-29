@@ -4,6 +4,30 @@ import React, {
 import './CLPro.css';
 
 class Content extends Component {
+  constructor() {
+    super()
+    this.state = {
+      repos: []
+    }
+  }
+
+  async componentDidMount() {
+    const res = await fetch('https://api.github.com/users/Dthall424/repos')
+    const json = await res.json()
+  //  this.setState({
+  //    repos: json
+  //  })
+    let repos = json.map((repo) => {
+      return(
+        <div key={repo.results}>
+          <img src={repo.name} />
+        </div>
+      )
+    })
+  console.log(json)
+  console.log(this.state.repos.length)
+  }
+
   render() {
     return ( <
       body >
